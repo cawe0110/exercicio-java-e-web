@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+</head>
+<body>
+    
+<h1>Bem vindo</h1>
+<hr>
+<ul>
+    <li>home</li>
+    <li>payment</li>
+    <li>about</li>
+</ul>
+<hr>
+<h1><img>text on the side</h1>
+
+<style>table, th, td {border: 1px solid;border-color: aliceblue;}
+*{font-family: cursive;color: aliceblue;}
+body{background-image: linear-gradient(pink,green,purple, blue, red);height: 100vh;}</style>
+
+    <h2>table:</h2>
+    <table style="width:100%">
+        <tr th:each="funcionario:${funcionarios}">
+          <th scope="row" th:text="${funcionario.id}">nome</th>
+          <th scope="row" th:text="${funcionario.id}">cpf</th>
+          <th scope="row" th:text="${funcionario.id}">telefone</th>
+          <th scope="row" th:text="${funcionario.id}">email</th>
+        </tr>
+        <tr>
+          <td th:text="${funcionario.nome}">Alfreds Futterkiste</td>
+          <td th:text="${funcionario.cpf}">999999999</td>
+          <td th:text="${funcionario.telefone}">48 9999-9999</td>
+          <td th:text="${funcionario.email}">alfred@gmail.com</td>
+        </tr>
+        <tr>
+            <td th:text="${funcionario.nome}">Maria Anders</td>
+            <td th:text="${funcionario.cpf}">888888888</td>
+            <td th:text="${funcionario.telefone}">48 8888-8888</td>
+            <td th:text="${funcionario.email}">maria@gmail.com</td>
+          </tr>
+      </table>
+
+</body>
+</html>
